@@ -38,9 +38,9 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-- [@stedi/no-aws-import](docs/no-aws-import.md)
-- [@stedi/instrument-aws-clients](docs/instrument-aws-clients.md)
-- [@stedi/instrument-document-clients](docs/instrument-document-clients.md)
+- [@stedi/no-aws-import](docs/rules/no-aws-import.md)
+- [@stedi/instrument-aws-clients](docs/rules/instrument-aws-clients.md)
+- [@stedi/instrument-document-clients](docs/rules/instrument-document-clients.md)
 
 ## Contributing
 
