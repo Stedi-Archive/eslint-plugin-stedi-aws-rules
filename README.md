@@ -1,4 +1,4 @@
-# eslint-plugin-stedi
+# eslint-rules-aws-stedi
 
 Best practices around using AWS SDK in Javascript & Typescript projects.
 
@@ -10,10 +10,10 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-stedi`:
+Next, install `eslint-rules-aws-stedi`:
 
 ```
-$ npm install eslint-plugin-stedi --save-dev
+$ npm install eslint-rules-aws-stedi --save-dev
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Add `stedi` to the plugins section of your `.eslintrc` configuration file. You c
 
 ```json
 {
-  "plugins": ["stedi"]
+  "plugins": ["eslint-rules-aws-stedi"]
 }
 ```
 
@@ -31,7 +31,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "stedi/no-aws-import": true
+    "eslint-rules-aws-stedi/no-aws-import": true
   }
 }
 ```
