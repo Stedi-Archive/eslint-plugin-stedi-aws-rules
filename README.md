@@ -2,6 +2,10 @@
 
 Best practices around using AWS SDK in Javascript & Typescript projects.
 
+References:
+
+- https://pages.awscloud.com/rs/112-TZM-766/images/2020_0316-SRV_Slide-Deck.pdf
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
@@ -31,7 +35,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "stedi/no-aws-import": true
+    "eslint-rules-aws-stedi/no-aws-import": true
   }
 }
 ```
