@@ -1,5 +1,5 @@
 {
-  "name": "@stedi/eslint-rules-aws-stedi",
+  "name": "@stedi/eslint-plugin-stedi-aws-rules",
   "version": "0.0.1",
   "description": "AWS coding best practices by Stedi",
   "keywords": [
