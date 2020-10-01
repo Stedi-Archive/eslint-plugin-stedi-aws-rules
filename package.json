@@ -6,7 +6,8 @@
     "eslint",
     "eslintplugin",
     "eslint-plugin",
-    "aws"
+    "aws",
+    "rules"
   ],
   "author": "Stedi <engineering@stedi.com> (https://stedi.com/)",
   "main": "lib/index.js",
@@ -19,6 +20,9 @@
   },
   "dependencies": {
     "requireindex": "~1.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
