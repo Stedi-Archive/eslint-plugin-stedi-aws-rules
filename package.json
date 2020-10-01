@@ -16,7 +16,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "echo 'to be added using mocha tests --recursive'"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
