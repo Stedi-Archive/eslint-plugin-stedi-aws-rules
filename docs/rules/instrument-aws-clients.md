@@ -2,35 +2,34 @@
 
 Please describe the origin of the rule here.
 
-
 ## Rule Details
 
-This rule aims to...
+This rule aims to make sure all your AWS SDK client instances are instrumented using AWS X-Ray. This allows you to investigate which parts of your application are bottlenecks.
 
 Examples of **incorrect** code for this rule:
 
 ```js
+import SecretsManager from "aws-sdk/clients/secretsmanager"
 
-// fill me in
-
+const ssm = new SecretsManager()
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
+import SecretsManager from "aws-sdk/clients/secretsmanager"
 
-// fill me in
-
+const ssm = new SecretsManager()
+AWSXRay.captureAWSClient(ssm)
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+Turn off this rule if you're using other instrumentation tools.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+- [https://aws.amazon.com/xray/](https://aws.amazon.com/xray/)
+- [https://docs.aws.amazon.com/xray-sdk-for-nodejs/latest/reference/index.html](https://docs.aws.amazon.com/xray-sdk-for-nodejs/latest/reference/index.html)
+- [https://github.com/aws/aws-xray-sdk-node](https://github.com/aws/aws-xray-sdk-node)
+- [https://www.youtube.com/watch?v=JBOo2L4sqt8](https://www.youtube.com/watch?v=JBOo2L4sqt8)

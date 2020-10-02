@@ -1,36 +1,35 @@
-#  Always instrument DynamoDB.DocumentClient code with X-Ray (instrument-document-clients)
+# Always instrument DynamoDB.DocumentClient code with X-Ray (instrument-document-clients)
 
-Please describe the origin of the rule here.
-
+`DocumentClient` is a special case in AWS SDK. It has to be treated differently than the rest of AWS SDK services.
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to make sure all your AWS DynamoDB DocumentClient instances are instrumented using AWS X-Ray. This allows you to investigate which calls to DynamoDB are bottlenecks.
 
 Examples of **incorrect** code for this rule:
 
 ```js
+import DynamoDB from "aws-sdk/clients/dynamodb"
 
-// fill me in
-
+const dynamoClient = new DynamoDB.DocumentClient()
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
+import DynamoDB from "aws-sdk/clients/dynamodb"
 
-// fill me in
-
+const dynamoClient = new DynamoDB.DocumentClient()
+AWSXRay.captureAWSClient((dynamoClient as any).service);
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+Turn off this rule if you're using other instrumentation tools.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+- [https://aws.amazon.com/xray/](https://aws.amazon.com/xray/)
+- [https://docs.aws.amazon.com/xray-sdk-for-nodejs/latest/reference/index.html](https://docs.aws.amazon.com/xray-sdk-for-nodejs/latest/reference/index.html)
+- [https://github.com/aws/aws-xray-sdk-node](https://github.com/aws/aws-xray-sdk-node)
+- [https://www.youtube.com/watch?v=JBOo2L4sqt8](https://www.youtube.com/watch?v=JBOo2L4sqt8)
