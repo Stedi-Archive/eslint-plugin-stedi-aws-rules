@@ -16,7 +16,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo 'to be added using mocha tests --recursive'"
+    "test": "echo 'to be added using mocha tests --recursive'",
+    "lint": "npx eslint ."
   },
   "dependencies": {
     "requireindex": "~1.1.0"
