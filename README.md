@@ -14,10 +14,10 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-stedi-aws-rules`:
+Next, install `@stedi/eslint-plugin-stedi-aws-rules`:
 
 ```
-$ npm install eslint-plugin-stedi-aws-rules --save-dev
+npm install @stedi/eslint-plugin-stedi-aws-rules --save-dev
 ```
 
 ## Usage
