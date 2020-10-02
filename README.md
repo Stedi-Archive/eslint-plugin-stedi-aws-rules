@@ -35,7 +35,9 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "@stedi/stedi-aws-rules/no-aws-import": "error"
+    "@stedi/stedi-aws-rules/no-aws-import": "error",
+    "@stedi/stedi-aws-rules/instrument-aws-clients": "error",
+    "@stedi/stedi-aws-rules/instrument-document-clients": "error"
   }
 }
 ```
