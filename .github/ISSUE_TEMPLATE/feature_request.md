@@ -1,10 +1,20 @@
 ---
-name: "🎉 Feature request"
+name: "🎉 Feature/rule request"
 about: Suggest an idea
 ---
 
 <!-- ⚠️ Search existing issues to avoid creating duplicates  -->
 <!-- ⚠️ Answer ALL required questions below -->
+
+<!--
+Q0: Describe the rule name, it should encapsulate idea of the rule in 4 words at maximum
+-->
+
+### Rule name
+
+```
+⚠️ REPLACE WITH NAME
+```
 
 <!--
 Q1: Describe the problem (use case) that needs to be solved
@@ -15,11 +25,19 @@ Q1: Describe the problem (use case) that needs to be solved
 ⚠️ REPLACE WITH DESCRIPTION
 
 <!--
-Q2: Propose solution (e.g. provide configuration example)
-
-Note: This is optional, remove this section if you do not wish to propose anything at this point
+Q2: Provide code example of **incorrect** and **correct** code for this rule:
 -->
 
-### Proposed solution
+### Examples
 
-⚠️ REPLACE WITH PROPOSAL
+#### Incorrect
+
+```js
+⚠️ REPLACE WITH CODE
+```
+
+#### Correct
+
+```js
+⚠️ REPLACE WITH CODE
+```
