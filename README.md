@@ -50,9 +50,20 @@ Then configure the rules you want to use under the rules section.
 
 ## Contributing
 
-As Stedi uses this for own projects, we know this might not be the perfect approach for all the projects out there. If you have any ideas, just open an issue and tell me us you think.
+As Stedi uses this for own projects, we know this might not be the perfect approach for all the projects out there. If you have any ideas, just open an issue and tell us you think.
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
+
+## Release procedure
+
+This project is using Github Actions for releasing new versions of the library. To release a new version:
+
+```sh
+git tag -a vX.X.X -m "<release message"
+git push --tags
+```
+
+Based on this tag information, new release and package version will be created.
 
 ## License
 
