@@ -54,17 +54,6 @@ As Stedi uses this for own projects, we know this might not be the perfect appro
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
-## Release procedure
-
-This project is using Github Actions for releasing new versions of the library. To release a new version:
-
-```sh
-git tag -a vX.X.X -m "<release message"
-git push --tags
-```
-
-Based on this tag information, new release and package version will be created.
-
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT) © [Stedi](https://stedi.com)
