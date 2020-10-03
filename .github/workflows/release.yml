@@ -18,6 +18,8 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: npm ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.ENG_GITHUB_TOKEN }}
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.ENG_GITHUB_TOKEN }}
