@@ -1,50 +1,24 @@
+name: Release
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
-
-name: Create Release
-
+    branches:
+      - master
 jobs:
-  build:
-    name: Create Release
-    runs-on: ubuntu-latest
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: Test
-        run: npm test
-      - name: Lint
-        run: npm run lint
-      - name: Changelog
-        uses: scottbrenner/generate-changelog-action@master
-        id: Changelog
-        env:
-          REPO: ${{ github.repository }}
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            ${{ steps.Changelog.outputs.changelog }}
-          draft: false
-          prerelease: false
-  publish-gpr:
-    needs: build
-    name: Publish to Github
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.ENG_GITHUB_TOKEN }}
+        run: npm run release
