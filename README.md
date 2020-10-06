@@ -54,16 +54,19 @@ As Stedi uses this for own projects, we know this might not be the perfect appro
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
-## Release procedure
+### Adding a new rule
 
-This project is using Github Actions for releasing new versions of the library. To release a new version:
+To follow our structure, when bootstraping new rule please use [generator-eslint](https://github.com/eslint/generator-eslint) to do so.
+
+Make sure you're in the top-level directory of this repo and type:
 
 ```sh
-git tag -a vX.X.X -m "<release message"
-git push --tags
+$ yo eslint:rule
 ```
 
-Based on this tag information, new release and package version will be created.
+## Releases
+
+New releases are generated with each commit to the master using [semantic-release](https://github.com/semantic-release/semantic-release)
 
 ## License
 
