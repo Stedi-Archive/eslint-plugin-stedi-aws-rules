@@ -56,6 +56,20 @@ As Stedi uses this for own projects, we know this might not be the perfect appro
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
+### Adding a new rule
+
+To follow our structure, when bootstraping new rule please use [generator-eslint](https://github.com/eslint/generator-eslint) to do so.
+
+Make sure you're in the top-level directory of this repo and type:
+
+```sh
+$ yo eslint:rule
+```
+
+## Releases
+
+New releases are generated with each commit to the master using [semantic-release](https://github.com/semantic-release/semantic-release)
+
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT) © [Stedi](https://stedi.com)
