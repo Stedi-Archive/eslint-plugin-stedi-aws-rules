@@ -37,9 +37,6 @@
     "semantic-release": "^17.1.2"
   },
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
