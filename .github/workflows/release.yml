@@ -23,4 +23,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.ENG_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
         run: npm run release
