@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.0.0...v1.1.0) (2020-10-08)
+
+
+### Features
+
+* publish to npmjs ([1c1c611](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/1c1c6111716eb9c7479f32b05ea301b452945d69))
+
 # 1.0.0 (2020-10-03)
 
 
