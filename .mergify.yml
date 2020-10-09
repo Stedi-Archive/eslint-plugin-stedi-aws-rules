@@ -1,0 +1,23 @@
+pull_request_rules:
+  - name: Dependabot
+    conditions:
+      - author=dependabot-preview[bot]
+      - status-success=Test
+    actions:
+      merge:
+        method: rebase
+  - name: Dependabot Check Failures
+    conditions:
+      - author=dependabot-preview[bot]
+      - status-success=Test
+    actions:
+      request_reviews:
+        users:
+          - RafalWilinski
+  - name: General Review
+    conditions:
+      - -author=dependabot-preview[bot]
+    actions:
+      request_reviews:
+        users:
+          - RafalWilinski
