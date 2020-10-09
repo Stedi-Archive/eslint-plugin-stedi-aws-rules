@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.1.0...v1.1.1) (2020-10-09)
+
+
+### Bug Fixes
+
+* point publishConfig to npmjs ([d5aee29](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/d5aee291f6fb21d9ef9492e551bd31df5f3a49c8))
+* remove publishConfig.registry from package.json in order to publish to NPM ([49735b0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/49735b0bdf86112e17302562dcf45d22caa6e268))
+* update secret reference ([6f820e0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/6f820e0ad839780339ec038889f00a8e3bdf9b2d))
+
 # [1.1.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.0.0...v1.1.0) (2020-10-08)
 
 
