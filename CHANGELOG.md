@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.1.1...v1.1.2) (2020-10-09)
+
+
+### Bug Fixes
+
+* add access=public flag to npm's publishConfig ([b3c15d7](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/b3c15d7cca19f6c362e909a6d4f7552eb004b195))
+
 ## [1.1.1](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.1.0...v1.1.1) (2020-10-09)
 
 
