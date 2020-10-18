@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Install Deps
+        run: npm ci
       - name: Test
         run: npm test
   eslint:
