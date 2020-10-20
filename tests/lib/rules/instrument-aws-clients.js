@@ -21,15 +21,5 @@ ruleTester.run("instrument-aws-clients", rule, {
     // give me some code that won't trigger a warning
   ],
 
-  invalid: [
-    {
-      code: "",
-      errors: [
-        {
-          message: "Fill me in.",
-          type: "Me too",
-        },
-      ],
-    },
-  ],
+  invalid: [],
 })

@@ -2,36 +2,24 @@
  * @fileoverview  Always instrument DynamoDB.DocumentClient code with X-Ray
  * @author Tyler van Hensbergen
  */
-"use strict";
+"use strict"
 
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
 
 var rule = require("../../../lib/rules/instrument-document-clients"),
-
-    RuleTester = require("eslint").RuleTester;
-
+  RuleTester = require("eslint").RuleTester
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-var ruleTester = new RuleTester();
+var ruleTester = new RuleTester()
 ruleTester.run("instrument-document-clients", rule, {
+  valid: [
+    // give me some code that won't trigger a warning
+  ],
 
-    valid: [
-
-        // give me some code that won't trigger a warning
-    ],
-
-    invalid: [
-        {
-            code: "",
-            errors: [{
-                message: "Fill me in.",
-                type: "Me too"
-            }]
-        }
-    ]
-});
+  invalid: [],
+})
