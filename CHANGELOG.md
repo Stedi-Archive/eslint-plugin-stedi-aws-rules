@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.2.0...v1.3.0) (2020-10-29)
+
+
+### Features
+
+* extend instrumented-document-clients rule, add tests ([#19](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/issues/19)) ([abb165a](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/abb165a965676a45ba48986d823864abb0d20c38))
+
 # [1.2.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.1.2...v1.2.0) (2020-10-22)
 
 
