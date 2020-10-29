@@ -15,11 +15,44 @@ var rule = require("../../../lib/rules/instrument-document-clients"),
 // Tests
 //------------------------------------------------------------------------------
 
-var ruleTester = new RuleTester()
+var ruleTester = new RuleTester({
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+})
 ruleTester.run("instrument-document-clients", rule, {
   valid: [
-    // give me some code that won't trigger a warning
+    "const dynamoClient = new DynamoDB.DocumentClient()\n" +
+      "let ddb = AWSXRay.captureAWSClient(dynamoClient.service)\n" +
+      "ddb.scan()",
+    "let ddb = AWSXRay.captureAWSClient((new DynamoDB.DocumentClient()).service)\n" +
+      "ddb.scan()",
   ],
 
-  invalid: [],
+  invalid: [
+    {
+      code:
+        "const dynamoClient = new DynamoDB.DocumentClient()\n" +
+        "let ddb = AWSXRay.captureAWSClient(dynamoClient.wrong)\n" +
+        "ddb.scan()",
+      errors: [{ messageId: "instrumentService" }],
+    },
+    {
+      code:
+        "const dynamoClient = new DynamoDB.DocumentClient()\n" +
+        "let ddb = AWSXRay.captureAWSClient(dynamoClient)\n" +
+        "ddb.scan()",
+      errors: [{ messageId: "instrumentService" }],
+    },
+    {
+      code: "const ddb = new DynamoDB.DocumentClient(); ddb.scan()",
+      errors: [{ messageId: "notInstrumented", data: { name: "ddb" } }],
+    },
+    {
+      code:
+        "const ddb = AWSXRay.captureAWSClient(new DynamoDB.DocumentClient()); ddb.scan()",
+      errors: [{ messageId: "instrumentService" }],
+    },
+  ],
 })

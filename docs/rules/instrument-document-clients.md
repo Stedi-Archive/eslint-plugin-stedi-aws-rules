@@ -20,7 +20,7 @@ Examples of **correct** code for this rule:
 import DynamoDB from "aws-sdk/clients/dynamodb"
 
 const dynamoClient = new DynamoDB.DocumentClient()
-AWSXRay.captureAWSClient((dynamoClient as any).service);
+AWSXRay.captureAWSClient(dynamoClient.service)
 ```
 
 ## When Not To Use It
