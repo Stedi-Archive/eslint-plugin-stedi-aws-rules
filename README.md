@@ -49,6 +49,7 @@ Then configure the rules you want to use under the rules section.
 - [@stedi/stedi-aws-rules/no-aws-import](docs/rules/no-aws-import.md)
 - [@stedi/stedi-aws-rules/instrument-aws-clients](docs/rules/instrument-aws-clients.md)
 - [@stedi/stedi-aws-rules/instrument-document-clients](docs/rules/instrument-document-clients.md)
+- [@stedi/stedi-aws-rules/no-direct-lambda-invoke.md](docs/rules/no-direct-lambda-invoke.md)
 
 ## Contributing
 
