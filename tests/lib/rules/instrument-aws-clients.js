@@ -32,9 +32,48 @@ ruleTester.run("instrument-aws-clients", rule, {
       "let ddb = new DynamoDB()\n" +
       "AWSXRay.captureAWSClient(ddb)\n" +
       "AWSXRay.captureAWSClient(new SecretsManager())",
+
+    "import S3 from 'aws-sdk/clients/s3'\n" +
+      "async function fn() { await AWSXRay.captureAWSClient(new S3()).getObject({}) }",
   ],
 
   invalid: [
+    {
+      code:
+        "import SecretsManager from 'aws-sdk/clients/secretsmanager'\n" +
+        "const sm = new SecretsManager()",
+      errors: [
+        {
+          messageId: "clientNotInstrumented",
+          data: { client: "sm = new SecretsManager()" },
+        },
+      ],
+    },
+
+    {
+      code:
+        "import S3 from 'aws-sdk/clients/s3'\n" +
+        "async function fn() { await new S3().getObject({}) }",
+      errors: [
+        {
+          messageId: "clientNotInstrumented",
+          data: { client: "new S3().getObject({})" },
+        },
+      ],
+    },
+
+    {
+      code:
+        "import SecretsManager from 'aws-sdk/clients/secretsmanager'\n" +
+        "const sm = new SecretsManager().cancelRotateSecret()",
+      errors: [
+        {
+          messageId: "clientNotInstrumented",
+          data: { client: "new SecretsManager().cancelRotateSecret()" },
+        },
+      ],
+    },
+
     {
       code:
         "import SecretsManager from 'aws-sdk/clients/secretsmanager'\n" +
