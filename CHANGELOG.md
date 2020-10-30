@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.5.0...v1.5.1) (2020-10-30)
+
+
+### Bug Fixes
+
+* fix issue with direct call expressions, add test ([#25](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/issues/25)) ([dfb63bc](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/dfb63bc71c4366cdd23cdd0b7516f1ebd416d26d))
+
 # [1.5.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.4.0...v1.5.0) (2020-10-30)
 
 
