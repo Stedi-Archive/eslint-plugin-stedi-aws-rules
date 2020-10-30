@@ -16,10 +16,10 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `@stedi/eslint-plugin-stedi-aws-rules`:
+Next, install `@stedi-oss/eslint-plugin-stedi-aws-rules`:
 
 ```
-npm install @stedi/eslint-plugin-stedi-aws-rules --save-dev
+npm install @stedi-oss/eslint-plugin-stedi-aws-rules --save-dev
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ Add `stedi` to the plugins section of your `.eslintrc` configuration file. You c
 
 ```json
 {
-  "plugins": ["@stedi/stedi-aws-rules"]
+  "plugins": ["@stedi-oss/stedi-aws-rules"]
 }
 ```
 
@@ -37,19 +37,19 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "@stedi/stedi-aws-rules/no-aws-import": "error",
-    "@stedi/stedi-aws-rules/instrument-aws-clients": "error",
-    "@stedi/stedi-aws-rules/instrument-document-clients": "error"
+    "@stedi-oss/stedi-aws-rules/no-aws-import": "error",
+    "@stedi-oss/stedi-aws-rules/instrument-aws-clients": "error",
+    "@stedi-oss/stedi-aws-rules/instrument-document-clients": "error"
   }
 }
 ```
 
 ## Supported Rules
 
-- [@stedi/stedi-aws-rules/no-aws-import](docs/rules/no-aws-import.md)
-- [@stedi/stedi-aws-rules/instrument-aws-clients](docs/rules/instrument-aws-clients.md)
-- [@stedi/stedi-aws-rules/instrument-document-clients](docs/rules/instrument-document-clients.md)
-- [@stedi/stedi-aws-rules/no-direct-lambda-invoke.md](docs/rules/no-direct-lambda-invoke.md)
+- [@stedi-oss/stedi-aws-rules/no-aws-import](docs/rules/no-aws-import.md)
+- [@stedi-oss/stedi-aws-rules/instrument-aws-clients](docs/rules/instrument-aws-clients.md)
+- [@stedi-oss/stedi-aws-rules/instrument-document-clients](docs/rules/instrument-document-clients.md)
+- [@stedi-oss/stedi-aws-rules/no-direct-lambda-invoke.md](docs/rules/no-direct-lambda-invoke.md)
 
 ## Contributing
 
