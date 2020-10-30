@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.3.1...v1.4.0) (2020-10-30)
+
+
+### Features
+
+* new rule no-direct-lambda-invoke ([#23](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/issues/23)) ([112c42d](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/112c42d3a6f3c0f4f7a7ecf0f0e909192a7f17b1))
+
 ## [1.3.1](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.3.0...v1.3.1) (2020-10-29)
 
 
