@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.4.0...v1.5.0) (2020-10-30)
+
+
+### Features
+
+* publish plugin to the [@stedi-oss](https://github.com/stedi-oss) namespace instead of [@stedi](https://github.com/stedi) ([fe0f4c8](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/fe0f4c8ab0686f400bc71ec79aa28b9c49a2fc6b))
+
 # [1.4.0](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.3.1...v1.4.0) (2020-10-30)
 
 
