@@ -1,0 +1,63 @@
+version: 2
+registries:
+  npm-registry-npm-pkg-github-com:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: "${{secrets.NPM_REGISTRY_NPM_PKG_GITHUB_COM_TOKEN}}"
+  npm-registry-npm-pkg-github-com-stedi:
+    type: npm-registry
+    url: https://npm.pkg.github.com/Stedi
+    token: "${{secrets.NPM_REGISTRY_NPM_PKG_GITHUB_COM_STEDI_TOKEN}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: "@commitlint/cli"
+    versions:
+    - 12.0.0
+    - 12.0.1
+    - 12.1.0
+  - dependency-name: "@commitlint/config-conventional"
+    versions:
+    - 12.0.0
+    - 12.0.1
+    - 12.1.0
+  - dependency-name: husky
+    versions:
+    - 4.3.8
+    - 5.0.9
+    - 5.1.2
+    - 5.1.3
+    - 5.2.0
+  - dependency-name: mocha
+    versions:
+    - 8.3.0
+    - 8.3.1
+  - dependency-name: semantic-release
+    versions:
+    - 17.3.7
+    - 17.3.8
+    - 17.3.9
+    - 17.4.0
+    - 17.4.1
+  registries:
+  - npm-registry-npm-pkg-github-com
+  - npm-registry-npm-pkg-github-com-stedi
