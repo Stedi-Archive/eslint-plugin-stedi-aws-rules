@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.5.1...v1.5.2) (2022-04-20)
+
+
+### Bug Fixes
+
+* allow newer versions of eslint ([773aa06](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/commit/773aa06fdbd49bf65253b3329ec9e83394b5731f))
+
 ## [1.5.1](https://github.com/Stedi/eslint-plugin-stedi-aws-rules/compare/v1.5.0...v1.5.1) (2020-10-30)
 
 
