@@ -1,0 +1,18 @@
+version: 2
+registries:
+  npm-registry-npm-pkg-github-com:
+    url: https://githubproxy.dev.terminal.stedi.com
+    type: npm-registry
+    token: ${{secrets.DEPENDABOT_PACKAGE_TOKEN}}
+  npm-registry-npm-pkg-github-com-stedi:
+    url: https://githubproxy.dev.terminal.stedi.com/Stedi
+    type: npm-registry
+    token: ${{secrets.DEPENDABOT_PACKAGE_TOKEN}}
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+      time: "07:00"
+    ignore:
+    registries: "*"
