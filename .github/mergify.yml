@@ -1,0 +1,27 @@
+# https://github.com/Stedi/renovate-config/blob/main/.mergify.yml
+extends: renovate-config
+
+defaults:
+  actions:
+    request_reviews:
+      teams:
+        - cloud
+
+pull_request_rules:
+  - name: auto-approve release
+    conditions:
+      - author=release-please[bot]
+      - label~=autorelease
+    actions:
+      review:
+        type: APPROVE
+        message: Automatically approving release
+
+  - name: Team member approval
+    conditions:
+      - author=@cloud
+      - label=auto-approve
+    actions:
+      review:
+        type: APPROVE
+        message: Auto-approving based on team member request.
