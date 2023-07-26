@@ -1,9 +1,9 @@
-name: reviewdog
-on: [pull_request]
+name: pr-success
+on:
+  pull_request: {}
 
 jobs:
-  test:
-    name: Test
+  pr-success:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -11,8 +11,7 @@ jobs:
         run: npm ci
       - name: Test
         run: npm test
-  eslint:
-    name: Eslint
+  reviewdog:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

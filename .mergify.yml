@@ -5,19 +5,4 @@ pull_request_rules:
       - status-success=Test
     actions:
       merge:
-        method: merge
-  - name: Dependabot Check Failures
-    conditions:
-      - author=dependabot[bot]
-      - status-success=Test
-    actions:
-      request_reviews:
-        users:
-          - RafalWilinski
-  - name: General Review
-    conditions:
-      - -author=dependabot-preview[bot]
-    actions:
-      request_reviews:
-        users:
-          - RafalWilinski
+        method: squash
