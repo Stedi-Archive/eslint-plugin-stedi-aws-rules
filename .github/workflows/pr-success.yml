@@ -1,8 +1,9 @@
-name: reviewdog
-on: [pull_request]
+name: pr-success
+on:
+  pull_request: {}
 
 jobs:
-  test:
+  pr-success:
     name: Test
     runs-on: ubuntu-latest
     steps:
