@@ -4,7 +4,6 @@ on:
 
 jobs:
   pr-success:
-    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -13,7 +12,6 @@ jobs:
       - name: Test
         run: npm test
   eslint:
-    name: Eslint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
