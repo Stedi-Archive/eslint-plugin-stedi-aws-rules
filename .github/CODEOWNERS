@@ -1,1 +1,5 @@
 * @Stedi/cloud
+
+# Allow bots to modify and merge these files without explicit PR approval from the team
+package.json
+package-lock.json
